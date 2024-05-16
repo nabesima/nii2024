@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-16 木 15:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>解集合プログラミングの実用化に向けた並列解法に関する研究開発</title>
+<meta name="author" content="鍋島 英知" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">解集合プログラミングの実用化に向けた並列解法に関する研究開発</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3b1dedb">研究概要</a>
+<ul>
+<li><a href="#org6cb23ad">研究資金と期間</a></li>
+<li><a href="#orgc6ee493">共同研究者</a></li>
+</ul>
+</li>
+<li><a href="#1ST">第１回研究会合</a>
+<ul>
+<li><a href="#org871cf6e">開催情報</a></li>
+<li><a href="#org5d79e03">プログラム</a></li>
+<li><a href="#org66c5338">参加予定者 (敬称略,順不同)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3b1dedb" class="outline-2">
+<h2 id="org3b1dedb">研究概要</h2>
+<div class="outline-text-2" id="text-org3b1dedb">
+<p>
+解集合プログラミング (Answer Set Programming; ASP) は，論理プログラミングと制約プログラミングを融合したパラダイムであり，その記述言語は論理プログラミング由来の優れた知識表現・モデリング能力を持つとともに，SAT
+技術に基づく高速な処理系が開発されている．これにより，人工知能分野における様々な問題への応用が急速に拡大している．
+</p>
+
+<p>
+本研究では，ASP のための実用的な並列解法の実現に向けて，以下の研究課題に取り組む．
+</p>
+
+<ol class="org-ol">
+<li>再現性のある並列 ASP ソルバーの実現</li>
+<li>ASPにおける並列解法のスループットの改善</li>
+<li>ASP における極小充足不能アトム集合の並列解法</li>
+</ol>
+</div>
+
+<div id="outline-container-org6cb23ad" class="outline-3">
+<h3 id="org6cb23ad">研究資金と期間</h3>
+<div class="outline-text-3" id="text-org6cb23ad">
+<ul class="org-ul">
+<li>資金：2024年度 国立情報学研究所 公募型共同研究・自由提案公募型</li>
+<li>期間：2024年4月から2025年3月</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc6ee493" class="outline-3">
+<h3 id="orgc6ee493">共同研究者</h3>
+<div class="outline-text-3" id="text-orgc6ee493">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">氏名</th>
+<th scope="col" class="org-left">担当</th>
+<th scope="col" class="org-left">所属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">鍋島 英知</td>
+<td class="org-left">研究代表者</td>
+<td class="org-left">山梨大学・総合研究部・准教授</td>
+</tr>
+
+<tr>
+<td class="org-left">井上 克巳</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">国立情報学研究所・情報学プリンシプル研究系・教授</td>
+</tr>
+
+<tr>
+<td class="org-left">田村 直之</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">神戸大学・名誉教授</td>
+</tr>
+
+<tr>
+<td class="org-left">番原 睦則</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">名古屋大学・情報学研究科・教授</td>
+</tr>
+
+<tr>
+<td class="org-left">宋 剛秀</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">神戸大学・DX・情報統括本部・准教授</td>
+</tr>
+
+<tr>
+<td class="org-left">盧 暁南</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">岐阜大学・工学部・准教授</td>
+</tr>
+
+<tr>
+<td class="org-left">Nguyen Quoc Tuan</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">国立情報学研究所・情報学プリンシプル研究系・特任研究員</td>
+</tr>
+
+<tr>
+<td class="org-left">森山 総太</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">東京工業大学・情報理工学院・知能情報コース・大学院生</td>
+</tr>
+
+<tr>
+<td class="org-left">菅原 孝太</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">山梨大学・大学院医工農学総合教育部・大学院生</td>
+</tr>
+
+<tr>
+<td class="org-left">桂 献一郎</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">山梨大学・大学院医工農学総合教育部・大学院生</td>
+</tr>
+
+<tr>
+<td class="org-left">伊藤 碧己</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">名古屋大学・大学院情報学研究科・情報システム学専攻・大学院生</td>
+</tr>
+
+<tr>
+<td class="org-left">杉森 唯瑠未</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">名古屋大学・大学院情報学研究科・情報システム学専攻・大学院生</td>
+</tr>
+
+<tr>
+<td class="org-left">桑原 祥文</td>
+<td class="org-left">研究分担者</td>
+<td class="org-left">神戸大学・大学院システム情報学研究科・大学院生</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-1ST" class="outline-2">
+<h2 id="1ST">第１回研究会合</h2>
+<div class="outline-text-2" id="text-1ST">
+</div>
+
+<div id="outline-container-org871cf6e" class="outline-3">
+<h3 id="org871cf6e">開催情報</h3>
+<div class="outline-text-3" id="text-org871cf6e">
+<ul class="org-ul">
+<li>日程: 2024年6月26日（水）9時開始，6月27日（木）12時終了 (予定)</li>
+<li>用務地：〒390-0811 長野県松本市中央１丁目２３−１</li>
+<li>用務先：松本商工会議所 303会議室</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5d79e03" class="outline-3">
+<h3 id="org5d79e03">プログラム</h3>
+<div class="outline-text-3" id="text-org5d79e03">
+<ul class="org-ul">
+<li><p>
+発表の進行状況に合わせて「柔軟」に進めたいと思います．
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">2024年6月26日(水)</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">09:00 - 12:00</td>
+<td class="org-left">ASP の定式化・解法に関するディスカッション</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">14:00 - 17:00</td>
+<td class="org-left">研究発表2-3件</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">2024年6月27日(木)</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">09:00 - 12:00</td>
+<td class="org-left">研究発表2-3件</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">14:00 - 15:00</td>
+<td class="org-left">今後の方針に関する打合わせ</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org66c5338" class="outline-3">
+<h3 id="org66c5338">参加予定者 (敬称略,順不同)</h3>
+<div class="outline-text-3" id="text-org66c5338">
+<ul class="org-ul">
+<li>鍋島 英知 (梨大)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: 鍋島 英知</p>
+<p class="date">Created: 2024-05-16 木 15:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
